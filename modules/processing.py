@@ -585,9 +585,9 @@ def process_images_inner(p: StableDiffusionProcessing) -> Processed:
             if not p.disable_extra_networks:
                 extra_networks.activate(p, extra_network_data)
 
-        with open(os.path.join(paths.data_path, "params.txt"), "w", encoding="utf8") as file:
-            processed = Processed(p, [], p.seed, "")
-            file.write(processed.infotext(p, 0))
+        # with open(os.path.join(paths.data_path, "params.txt"), "w", encoding="utf8") as file:
+        #     processed = Processed(p, [], p.seed, "")
+        #     file.write(processed.infotext(p, 0))
 
         if state.job_count == -1:
             state.job_count = p.n_iter
